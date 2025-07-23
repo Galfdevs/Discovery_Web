@@ -1,0 +1,46 @@
+   body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        .parallax-1 {
+            background-image: url('media/gato.jpg'); 
+        }
+
+        .parallax-2 {
+            background-image: url('media/2.jpg'); 
+        }
+
+        .content-block {
+            height: 50vh; 
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .message {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 5px;
+        }
