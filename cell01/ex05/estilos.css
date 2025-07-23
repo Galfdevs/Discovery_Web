@@ -1,0 +1,45 @@
+/* Contenedor de las dos celdas */
+.two-column-section {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    
+    
+    width: 90%; 
+    max-width: 1000px; 
+    margin: 50px auto; 
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+}
+
+/* Estilos comunes para ambas celdas */
+.cell {
+    padding: 30px 30px 30px 10px; 
+    min-height: 150px; 
+    
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    
+    font-size: 1.2em; 
+    color: #444; 
+    box-sizing: border-box; 
+    border-right: 1px solid black;
+}
+
+
+.first-cell {
+    background-color: #cca9dd; 
+}
+
+.second-cell {
+    background-color: #7668af;
+    border-right: none;
+}
+
+.cell p {
+    width: 100%; 
+    text-align: left; 
+    margin: 0; 
+}
