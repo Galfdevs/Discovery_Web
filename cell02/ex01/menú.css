@@ -1,34 +1,28 @@
-/* General Styles */
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f8f9fa;
-    /* Lighter background */
     padding: 50px;
     display: flex;
-    /* Centering example */
     justify-content: center;
     align-items: flex-start;
-    /* Align to top */
     min-height: 100vh;
-    /* Full viewport height */
     margin: 0;
 }
 
-/* Hamburger Menu Container */
+
 .hamburger-menu {
     position: relative;
     display: inline-block;
     z-index: 1000;
-    /* Ensure it's above other content */
 }
 
-/* Hidden Checkbox */
+
 .hamburger-menu input[type="checkbox"] {
     display: none;
-    /* Hide the actual checkbox */
 }
 
-/* Menu Icon (the hamburger lines) */
+
 .menu-icon {
     width: 40px;
     height: 30px;
@@ -37,16 +31,13 @@ body {
     justify-content: space-between;
     cursor: pointer;
     padding: 5px;
-    /* Add some padding around the icon */
     box-sizing: content-box;
-    /* Ensures padding doesn't affect width/height calculations of the bars */
     transition: transform 0.3s ease;
-    /* Smooth transition for icon rotation */
+    
 }
 
 .menu-icon span {
     display: block;
-    /* Ensure spans take full width */
     height: 4px;
     background: #333;
     border-radius: 2px;
@@ -54,64 +45,54 @@ body {
     /* Smooth transition for bar animations */
 }
 
-/* Menu Icon Animation (when checkbox is checked) */
+
 .hamburger-menu input[type="checkbox"]:checked+.menu-icon span:nth-child(1) {
     transform: translateY(13px) rotate(45deg);
-    /* Top bar rotates and moves */
+  
 }
 
 .hamburger-menu input[type="checkbox"]:checked+.menu-icon span:nth-child(2) {
     opacity: 0;
-    /* Middle bar fades out */
+    
 }
 
 .hamburger-menu input[type="checkbox"]:checked+.menu-icon span:nth-child(3) {
     transform: translateY(-13px) rotate(-45deg);
-    /* Bottom bar rotates and moves */
+   
 }
 
-/* Navigation Menu */
+
 .nav-menu {
     display: none;
-    /* Hidden by default */
+   
     position: absolute;
     top: calc(100% + 10px);
-    /* Position below the icon with a gap */
     left: 0;
     background: white;
     border: 1px solid #e0e0e0;
-    /* Lighter border */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Softer shadow */
     border-radius: 8px;
-    /* Slightly more rounded corners */
     overflow: hidden;
     min-width: 180px;
-    /* Ensure a minimum width for the menu */
     transform-origin: top;
-    /* For potential future scaling animations */
 }
 
 .nav-menu a {
     display: block;
     padding: 12px 20px;
-    /* More padding for better touch targets */
     text-decoration: none;
     color: #444;
-    /* Slightly darker text */
     transition: background-color 0.2s ease, color 0.2s ease;
-    /* Smooth hover transition */
 }
 
 .nav-menu a:hover,
 .nav-menu a:focus {
-    /* Added focus state for accessibility */
     background-color: #f0f0f0;
     color: #222;
 }
 
-/* Show Menu when checkbox is checked */
+
 .hamburger-menu input[type="checkbox"]:checked~.nav-menu {
     display: block;
-    /* Show the menu */
+   
 }
