@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        #ft_list {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            background-color: #fff;
+            margin-top: 10px;
+        }
+        .todo-item {
+            background-color: #e9e9e9;
+            margin-bottom: 5px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            word-wrap: break-word; /* Para manejar textos largos */
+        }
+        .todo-item:hover {
+            background-color: #dcdcdc;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mis Tareas Pendientes</h1>
+    <button id="new-todo-btn">New</button>
+    <div id="ft_list">
+        </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
