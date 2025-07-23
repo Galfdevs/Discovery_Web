@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #globo {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%; /* Esto crea la forma circular */
+            cursor: pointer;
+            transition: all 0.1s ease-in-out; /* Transición suave para los cambios de tamaño y color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="globo"></div>
+
+    <script>
+        const globo = document.getElementById('globo');
+        let tamañoActual = 200;
+        const colores = ['red', 'green', 'blue'];
+        let indiceColorActual = 0;
+
+       
+        function actualizarGlobo() {
+            globo.style.width = tamañoActual + 'px';
+            globo.style.height = tamañoActual + 'px';
+            globo.style.backgroundColor = colores[indiceColorActual];
+        }
+
+      
+        globo.addEventListener('click', () => {
+            tamañoActual += 10;
+            indiceColorActual = (indiceColorActual + 1) % colores.length;
+
+            if (tamañoActual > 420) {
+                tamañoActual = 200; 
+                indiceColorActual = 0; 
+            }
+            actualizarGlobo();
+        });
+
+        
+        globo.addEventListener('mouseout', () => {
+            if (tamañoActual > 200) {
+                tamañoActual -= 5;
+                indiceColorActual = (indiceColorActual - 1 + colores.length) % colores.length;
+                actualizarGlobo();
+            }
+        });
+
+        actualizarGlobo();
+    </script>
+
+</body>
+</html>
