@@ -1,0 +1,23 @@
+  #titulocontenedor {
+            text-align: center;
+
+        }
+
+        #father-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        #image-box1, #image-box2{
+            width: 150px;
+            height: auto;
+
+        }
+
+        #image-box1 img,#image-box2 img {
+            width: 100%;
+            height: auto;
+
+        }
